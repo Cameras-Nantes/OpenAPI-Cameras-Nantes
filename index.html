@@ -14,6 +14,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/960_12_col.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/index2.css"> -->
 
 		<style type="text/css">
 			body{
@@ -24,6 +25,9 @@
 			}
 			#formSearch{
 				padding-left: 100px;
+			}
+			#imgs{
+				display: inline !important;
 			}
 		</style>
 	</head>
@@ -65,13 +69,15 @@
 
 		<div class="container">
 			<h1>Centralisation des caméras de <a href="http://infotrafic.nantesmetropole.fr/carto.html">Nantes Metropole Info Trafic</a></h1> 
-
+			<br/>
 			<div ui-view> 
 				Si vous voyez ceci, il y a un problème dans le script.
 			</div> 
 
-			<div class="container_12" id="imgs">
-		
+			<div class="container">
+				<div class="row" id="imgs">
+
+				</div>
 			</div>	
 			
 		</div>
@@ -114,20 +120,17 @@
 						respRest : function(Restangular) {
 							try {
 								var urls = Restangular.one("data-cameras-urls", "-KJ6BONU9P5SSNiUqJQB").get().then(function(urls) {
-									var html = "<ul class='list-unstyled inline'>";
+	
 									for(var i=700; i<=799; i++) {
-										/*$("#columns").append("<div class='card' id='"+i+"'>");
+										//$("#imgs").append("<div class='card' id='"+i+"'>");
 										
-										$("#" +i).append("<img class='card-img-top' src='" + urls["s"+i] + "' alt='camera manquante' onerror='$'> <div class='card-block'>");*/
-
-										html += "<li> <img class='card-img-top' src='" + urls["s"+i] + "' alt='notfound'> </li>";
-										
+										$("#imgs").append("<img class='col-md-4 card-img-top' src='" + urls["s"+i] + "' alt='camera manquante'> ");
 									}
 
-									$("#imgs").append(html);
+									
 
 									$("img").error(function() {
-											$(this).parent().remove()
+											$(this).remove()
 									});
 								});  
 							}
