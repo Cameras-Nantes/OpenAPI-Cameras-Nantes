@@ -1,6 +1,7 @@
 'use strict';
 
 require("angular");
+require("jquery")
 
 var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras");
 
@@ -112,6 +113,14 @@ var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras");
 					city		: "Nantes",
 					dd_lat		: "47.209167",
 					dd_long		: "-1.567188"
+				},
+				c716: {
+					url			: "http://infotrafic.nantesmetropole.fr/data/webcams/rt716.jpg",
+					location	: "Rond-point des Marguyonnes",
+					zip			: "44400",
+					city		: "Rezé",
+					dd_lat		: "47.192296",
+					dd_long		: "-1.562987"
 				},
 				c717: {
 					url 		: "http://infotrafic.nantesmetropole.fr/data/webcams/rt717.jpg",
@@ -312,6 +321,14 @@ var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras");
 					city		: "Nantes",
 					dd_lat		: "47.209460",
 					dd_long		: "-1.596053"
+				},
+				c748: {
+					url			: "http://infotrafic.nantesmetropole.fr/data/webcams/rt748.jpg",
+					location	: "Place Vincent Auriol - Boulevard Jean Ingres",
+					zip			: "44100",
+					city		: "Nantes",
+					dd_lat		: "47.221787",
+					dd_long		: "-1.592872"
 				},
 				c749: {
 					url 		: "http://infotrafic.nantesmetropole.fr/data/webcams/rt749.jpg",
