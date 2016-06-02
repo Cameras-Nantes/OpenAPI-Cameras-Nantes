@@ -31676,8 +31676,9 @@ ref.child("cameras").transaction(function (cameras) {
 		console.info("Les caméras existent déjà.");
 	}
 }, function (error, committed) {
-	console.log("commited ?", committed);
-	console.log("Unexpected error at creating data.", error);
+	if (error) {
+		console.log("Unexpected error at creating data.", error);
+	}
 });
 
 },{"angular":2}]},{},[3]);
