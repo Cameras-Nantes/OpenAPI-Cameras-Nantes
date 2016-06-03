@@ -20,6 +20,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		})
 });
 
+app.directive('emitLastRepeaterElement', function() {
+	return function(scope) {
+		if(scope.$last) {
+			scope.$emit('LastRepeaterElement');
+		}
+	};
+});
+
 app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $firebaseObject) {
 	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
 
@@ -28,6 +36,11 @@ app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $fir
 	cameras.$loaded().then(function(cams) {
 		$scope.cameras = cams;
 		
-		$('.materialboxed').materialbox();
+		$scope.$on("LastRepeaterElement", function() {
+			$("img").error(function() {
+				$(this).parent().parent().parent().remove();
+			})
+			$('.materialboxed').materialbox();
+		})
 	})
 });
