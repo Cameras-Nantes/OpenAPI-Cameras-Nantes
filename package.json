@@ -6,9 +6,9 @@
   "dependencies": {
     "angular-ui-router": "^0.3.0",
     "angular": "^1.5.6",
-    "firebase": "^3.0.3",
+    "firebase": "^2.4.2",
     "firebase-tools": "^3.0.1",
-    "angularfire": "^1.2.0",
+    "angularfire": "^1.1.4",
     "jquery": "^2.2.4",
     "restangular": "^1.5.2"
   },
@@ -21,8 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-copy-file": "cp static/index.html dist/index.html && cp static/database.js dist/database.js",
-    "build": "npm run build-copy-file && browserify static/index.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "build-copy-file": "cp -R static/* dist/",
+    "build": "npm run build-copy-file && browserify static/js/index.js -o dist/js/bundle.js -t [ babelify --presets [ es2015 ] ]",
     "deploy": "npm run build && firebase deploy"
   },
   "repository": {

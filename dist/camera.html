@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col col l4 m6 s12" ng-repeat="cam in cameras track by $index">
+
+			<div class="card">
+				<div class="card-image">
+					<img src="{{cam.url}}" alt="?" class="materialboxed" data-caption="{{cam.location}} - {{cam.zip}}{{cam.city}} - {{cam.dd_lat}}, {{cam.dt_long}}"/>
+					<span class="card-title">{{cam.$id}}</span>
+				</div>
+				<div class="card-content">
+					<p>
+						{{cam.zip}}{{cam.city}}
+
+						<br/>
+
+						Coordonnées GPS: {{cam.dd_lat}}, {{dd_long}}
+					</p>
+				</div>
+				<div class="card-action">
+					<a href="#" class="truncate" title="Accéder directement à l'URL de la caméra">{{cam.location}}</a>
+				</div>
+			</div>
+
+	</div>
+</div>
+
