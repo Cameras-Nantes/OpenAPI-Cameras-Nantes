@@ -4,12 +4,13 @@
   "description": "API project to bring some metadata to the open-data cameras of Nantes, France",
   "main": "index.js",
   "dependencies": {
-    "angular-ui-router": "^0.3.0",
     "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.0",
+    "angularfire": "^1.1.4",
     "firebase": "^2.4.2",
     "firebase-tools": "^3.0.1",
-    "angularfire": "^1.1.4",
     "jquery": "^2.2.4",
+    "lodash": "^4.13.1",
     "restangular": "^1.5.2"
   },
   "devDependencies": {

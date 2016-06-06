@@ -5,6 +5,8 @@ require("angular");
 require("angular-ui-router");
 require("angularfire");
 require("firebase");
+require("lodash")
+/*require("underscore");*/
 
 
 var app = angular.module('cameraApp', ['ui.router', "firebase"]);
@@ -28,7 +30,7 @@ app.directive('emitLastRepeaterElement', function() {
 	};
 });
 
-app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $firebaseObject) {
+app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $interval) {
 	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
 
 	var cameras = $firebaseArray(ref);
@@ -42,6 +44,19 @@ app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $fir
 			});
 			$(".preloader-wrapper").remove();
 			$('.materialboxed').materialbox();
+			$interval(reloadWebcam, 1000);
+			reloadWebcam();
 		})
 	})
+
+	function reloadWebcam() {
+		$scope.cameras = addTimestamp(cameras);
+	}
+
+	function addTimestamp(cameras) {
+		return _.cloneDeep(cameras).map(function(camera) {
+			camera.url += +new Date();
+			return camera;
+		});
+	}
 });
