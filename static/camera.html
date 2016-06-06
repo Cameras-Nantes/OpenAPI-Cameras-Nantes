@@ -3,16 +3,16 @@
 
 			<div class="card">
 				<div class="card-image">
-					<img src="{{cam.url}}" alt="?" class="materialboxed" data-caption="{{cam.location}} - {{cam.zip}}{{cam.city}} - {{cam.dd_lat}}, {{cam.dt_long}}"/>
+					<img src="{{cam.url}}" alt="?" class="materialboxed" data-caption="{{cam.location}} - {{cam.zip}}&nbsp;{{cam.city}} - {{cam.dd_lat}}, {{cam.dd_long}}"/>
 					<span class="card-title">{{cam.$id}}</span>
 				</div>
 				<div class="card-content">
 					<p>
-						{{cam.zip}}{{cam.city}}
+						{{cam.zip}}&nbsp;{{cam.city}}
 
 						<br/>
 
-						Coordonnées GPS: {{cam.dd_lat}}, {{dd_long}}
+						Coordonnées GPS: {{cam.dd_lat}}, {{cam.dd_long}}
 					</p>
 				</div>
 				<div class="card-action">
