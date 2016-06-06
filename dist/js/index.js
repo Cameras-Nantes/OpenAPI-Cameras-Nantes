@@ -6,7 +6,6 @@ require("angular-ui-router");
 require("angularfire");
 require("firebase");
 require("lodash")
-/*require("underscore");*/
 
 
 var app = angular.module('cameraApp', ['ui.router', "firebase"]);
