@@ -48085,6 +48085,7 @@ app.controller("allCameraCtrl", function ($scope, $firebase, $firebaseArray, $fi
 			$("img").error(function () {
 				$(this).parent().parent().parent().remove();
 			});
+			$(".preloader-wrapper").remove();
 			$('.materialboxed').materialbox();
 		});
 	});

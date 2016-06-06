@@ -39,7 +39,8 @@ app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $fir
 		$scope.$on("LastRepeaterElement", function() {
 			$("img").error(function() {
 				$(this).parent().parent().parent().remove();
-			})
+			});
+			$(".preloader-wrapper").remove();
 			$('.materialboxed').materialbox();
 		})
 	})

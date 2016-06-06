@@ -127,139 +127,53 @@
 				le tout basé sur l'open-data des caméras de nantes.</p>
 			</blockquote>
 
-			<div ui-view></div>
+
+			<div class="preloader-wrapper big active">
+				<div class="spinner-layer spinner-blue">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div><div class="gap-patch">
+						<div class="circle"></div>
+					</div><div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div><div class="gap-patch">
+						<div class="circle"></div>
+					</div><div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-yellow">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div><div class="gap-patch">
+						<div class="circle"></div>
+					</div><div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-green">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div><div class="gap-patch">
+						<div class="circle"></div>
+					</div><div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+
 
 			<div class="row" id="allCams" ui-view>
-				<!-- <div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt701/snap_c1.jpg" alt="?" class="materialboxed" data-caption="Pont du Cens">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt702/snap_c1.jpg" alt="?" class="materialboxed" data-caption="Rond-point de Rennes">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt703/snap_c1.jpg" alt="?" class="materialboxed" data-caption="Michelet">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt704.jpg" alt="?" class="materialboxed" data-caption="Pont Moand">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-
-
-				<div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt701/snap_c1.jpg" alt="?" class="materialboxed" data-caption="Pont du Cens">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt702/snap_c1.jpg" alt="?" class="materialboxed" data-caption="Rond-point de Rennes">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col l3 m6 s612">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt703/snap_c1.jpg" alt="?" class="materialboxed" data-caption="Michelet">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col col l4 m6 s12">
-					<div class="card">
-						<div class="card-image">
-							<img src="http://infotrafic.nantesmetropole.fr/data/webcams/rt704.jpg" alt="?" class="materialboxed" data-caption="Pont Moand">
-							<span class="card-title">Card Title</span>
-						</div>
-						<div class="card-content">
-							<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-						</div>
-						<div class="card-action">
-							<a href="#">This is a link</a>
-						</div>
-					</div>
-				</div>
-			</div> -->
+			
+			</div>
 		</div>
 		
 		<script type="text/javascript">

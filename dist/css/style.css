@@ -2,3 +2,6 @@ img {
 	width: 320px !important,
 	height: auto !important;
 }
+.preloader-wrapper{
+	left: 50%
+}
