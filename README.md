@@ -11,9 +11,16 @@ et par lieu.
 ](OpenAPI-Cameras-Nantes.github.io)
 - HTML5
 - [Materialize CSS] (http://materializecss.com/)
-- [ANgular.js] (https://angularjs.org/) 1.5
+- Javascript
+  - [JQuery] (https://jquery.com/)
+  - [EcmaScript 2015] (https://babeljs.io/docs/learn-es2015/)
+  - [Firebase Javascript API] (https://www.firebase.com/docs/web/api/)
+  - [ANgular.js] (https://angularjs.org/) 1.5
+    - [AngularFire] (https://www.firebase.com/docs/web/libraries/angular/)
+    - [Angular UI-ROuter] (https://github.com/angular-ui/ui-router)
   - [Node.js] (https://nodejs.org/en/)
-  - [Restangular] (https://github.com/mgonto/restangular)
+    - [Browserify] (http://browserify.org/)
+    - [Babelify] (https://github.com/babel/babelify)
   
 ###English version
 > Explore cameras around Nantes, France !
@@ -26,6 +33,13 @@ where you are able to browse through cameras, and find them thanks to my extra d
 ](OpenAPI-Cameras-Nantes.github.io)
 - HTML5
 - [Materialize CSS] (http://materializecss.com/)
-- [ANgular.js] (https://angularjs.org/) 1.5
+- Javascript
+  - [JQuery] (https://jquery.com/)
+  - [EcmaScript 2015] (https://babeljs.io/docs/learn-es2015/)
+  - [Firebase Javascript API] (https://www.firebase.com/docs/web/api/)
+  - [ANgular.js] (https://angularjs.org/) 1.5
+    - [AngularFire] (https://www.firebase.com/docs/web/libraries/angular/)
+    - [Angular UI-ROuter] (https://github.com/angular-ui/ui-router)
   - [Node.js] (https://nodejs.org/en/)
-  - [Restangular] (https://github.com/mgonto/restangular)
+    - [Browserify] (http://browserify.org/)
+    - [Babelify] (https://github.com/babel/babelify)
