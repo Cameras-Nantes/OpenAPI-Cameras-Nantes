@@ -64471,21 +64471,36 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 		url: "/all",
 		templateUrl: "camera.html",
 		controller: "allCameraCtrl"
+	}).state('s', {
+		url: "/s",
+		templateUrl: "camera.html",
+		controller: "searchController"
 	});
-});
+}).service("cameraService", ["$firebase", "$firebaseArray", function ($firebase, $firebaseArray) {
+	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
 
-app.directive('emitLastRepeaterElement', function () {
+	var cameras = $firebaseArray(ref);
+
+	this.getAll = function () {
+		return cameras;
+	};
+
+	this.getDecade = function (key) {
+		if (key == 1) {
+			return cameras.slice(1, 9);
+		} else {
+			return cameras.slice(key * 10, key * 10 - 10);
+		}
+	};
+}]).directive('emitLastRepeaterElement', function () {
 	return function (scope) {
 		if (scope.$last) {
 			scope.$emit('LastRepeaterElement');
 		}
 	};
-});
+}).controller("allCameraCtrl", function ($scope, cameraService, $interval) {
 
-app.controller("allCameraCtrl", function ($scope, $firebase, $firebaseArray, $interval) {
-	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
-
-	var cameras = $firebaseArray(ref);
+	var cameras = cameraService.getAll();
 
 	cameras.$loaded().then(function (cams) {
 		$scope.cameras = cams;
@@ -64511,6 +64526,8 @@ app.controller("allCameraCtrl", function ($scope, $firebase, $firebaseArray, $in
 			return camera;
 		});
 	}
+}).controller("searchController", function ($scope, $interval) {
+	console.log("hehe");
 });
 
 },{"angular":3,"angular-ui-router":1,"angularfire":5,"firebase":6,"jquery":7,"lodash":8}]},{},[9]);

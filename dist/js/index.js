@@ -5,8 +5,7 @@ require("angular");
 require("angular-ui-router");
 require("angularfire");
 require("firebase");
-require("lodash")
-
+require("lodash");
 
 var app = angular.module('cameraApp', ['ui.router', "firebase"]);
 
@@ -18,21 +17,42 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url			: "/all",
 			templateUrl	: "camera.html",
 			controller 	: "allCameraCtrl"
+		}).state('s', {
+			url 		: "/s",
+			templateUrl	: "camera.html",
+			controller	: "searchController"
 		})
-});
 
-app.directive('emitLastRepeaterElement', function() {
+})
+.service("cameraService", ["$firebase", "$firebaseArray", function($firebase, $firebaseArray) {
+	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
+
+	var cameras = $firebaseArray(ref);
+
+	this.getAll = function() {
+		return cameras;
+	};
+
+	this.getDecade = function(key) {
+		if(key == 1) {
+			return cameras.slice(1, 9);
+		}
+		else {
+			return cameras.slice(key*10, key *10 -10);
+		}
+
+	}
+}])
+.directive('emitLastRepeaterElement', function() {
 	return function(scope) {
 		if(scope.$last) {
 			scope.$emit('LastRepeaterElement');
 		}
 	};
-});
-
-app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $interval) {
-	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
-
-	var cameras = $firebaseArray(ref);
+})
+.controller("allCameraCtrl", function($scope, cameraService, $interval) {
+	
+	var cameras = cameraService.getAll();
 
 	cameras.$loaded().then(function(cams) {
 		$scope.cameras = cams;
@@ -58,4 +78,7 @@ app.controller("allCameraCtrl", function($scope, $firebase, $firebaseArray, $int
 			return camera;
 		});
 	}
+})
+.controller("searchController", function($scope, $interval) {
+	console.log("hehe");
 });
