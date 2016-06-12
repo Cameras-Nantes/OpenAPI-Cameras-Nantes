@@ -163,48 +163,70 @@
 				<a href="https://github.com/OpenData-Camera-Nantes/OpenAPI-Cameras-Nantes">GitHub.</a></p>
 			</blockquote>
 
+			<div class="row">
+				<div class="col s6 offset-s3">
+					<div class="preloader-wrapper big active">
+						<div class="spinner-layer spinner-blue">
+							<div class="circle-clipper left">
+								<div class="circle"></div>
+							</div><div class="gap-patch">
+								<div class="circle"></div>
+							</div><div class="circle-clipper right">
+								<div class="circle"></div>
+							</div>
+						</div>
 
-			<div class="preloader-wrapper big active">
-				<div class="spinner-layer spinner-blue">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div><div class="gap-patch">
-						<div class="circle"></div>
-					</div><div class="circle-clipper right">
-						<div class="circle"></div>
+						<div class="spinner-layer spinner-red">
+							<div class="circle-clipper left">
+								<div class="circle"></div>
+							</div><div class="gap-patch">
+								<div class="circle"></div>
+							</div><div class="circle-clipper right">
+								<div class="circle"></div>
+							</div>
+						</div>
+
+						<div class="spinner-layer spinner-yellow">
+							<div class="circle-clipper left">
+								<div class="circle"></div>
+							</div><div class="gap-patch">
+								<div class="circle"></div>
+							</div><div class="circle-clipper right">
+								<div class="circle"></div>
+							</div>
+						</div>
+
+						<div class="spinner-layer spinner-green">
+							<div class="circle-clipper left">
+								<div class="circle"></div>
+							</div><div class="gap-patch">
+								<div class="circle"></div>
+							</div><div class="circle-clipper right">
+								<div class="circle"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="spinner-layer spinner-red">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div><div class="gap-patch">
-						<div class="circle"></div>
-					</div><div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
-				</div>
-
-				<div class="spinner-layer spinner-yellow">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div><div class="gap-patch">
-						<div class="circle"></div>
-					</div><div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
-				</div>
-
-				<div class="spinner-layer spinner-green">
-					<div class="circle-clipper left">
-						<div class="circle"></div>
-					</div><div class="gap-patch">
-						<div class="circle"></div>
-					</div><div class="circle-clipper right">
-						<div class="circle"></div>
-					</div>
+				<div class="col s6 offset-s4">
+					<ul class="pagination">
+						<li id="previous"><button id="prev" class="waves-effect waves-teal btn-flat"><i class="material-icons">chevron_left</i></button></li>
+						<li class="waves-effect"><a ui-sref="home({p : 1})">1</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 2})">2</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 3})">3</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 4})">4</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 5})">5</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 6})">6</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 7})">7</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 8})">8</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 9})">9</a></li>
+						<li class="waves-effect"><a ui-sref="home({p : 10})">10</a></li>
+						<li class="waves-effect"><button id="next" class="waves-effect waves-teal btn-flat"><i class="material-icons">chevron_right</i></button></li>
+					</ul>
 				</div>
 			</div>
+			
+			
 
 
 			<div class="row" id="allCams" ui-view>

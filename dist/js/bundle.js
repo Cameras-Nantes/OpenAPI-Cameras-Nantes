@@ -64465,12 +64465,18 @@ require("lodash");
 var app = angular.module('cameraApp', ['ui.router', "firebase"]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise("/all");
+	$urlRouterProvider.otherwise("/home");
 
-	$stateProvider.state('all', {
-		url: "/all",
+	$stateProvider.state('home', {
+		url: "/home?p",
 		templateUrl: "camera.html",
-		controller: "allCameraCtrl"
+		controller: "allCameraCtrl",
+		params: {
+			p: {
+				value: "1",
+				squash: false
+			}
+		}
 	}).state('s', {
 		url: "/s",
 		templateUrl: "camera.html",
@@ -64479,17 +64485,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 }).service("cameraService", ["$firebase", "$firebaseArray", function ($firebase, $firebaseArray) {
 	var ref = new Firebase("https://openapi-cameras-nantes.firebaseio.com/cameras/cameras");
 
-	var cameras = $firebaseArray(ref);
-
 	this.getAll = function () {
-		return cameras;
+		return $firebaseArray(ref);
 	};
 
 	this.getDecade = function (key) {
 		if (key == 1) {
-			return cameras.slice(1, 9);
+			return $firebaseArray(ref.orderByKey().startAt("701").endAt("709"));
 		} else {
-			return cameras.slice(key * 10, key * 10 - 10);
+			var startKey = String(key * 10 + 690);
+			var endKey = String(key * 10 + 700);
+
+			return $firebaseArray(ref.orderByKey().startAt(startKey).endAt(endKey));
 		}
 	};
 }]).directive('emitLastRepeaterElement', function () {
@@ -64498,21 +64505,41 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			scope.$emit('LastRepeaterElement');
 		}
 	};
-}).controller("allCameraCtrl", function ($scope, cameraService, $interval) {
+}).controller("allCameraCtrl", function ($scope, cameraService, $interval, $stateParams, $state, $location) {
+	$location.path('home');
 
-	var cameras = cameraService.getAll();
+	$scope.page = $stateParams.p;
+
+	$scope.nextPage = function () {
+		var page = parseInt(window.location.href.slice(-1));
+		page > 0 && page <= 9 && $state.go("home", { p: page + 1 });
+		!page && page != 0 && $state.go("home", { p: 2 });
+	};
+
+	$scope.prevPage = function () {
+		var page = parseInt(window.location.href.slice(-1));
+		page > 1 && $state.go("home", { p: page - 1 });
+		page == 0 && $state.go("home", { p: 9 });
+	};
+
+	var cameras = cameraService.getDecade($scope.page);
 
 	cameras.$loaded().then(function (cams) {
 		$scope.cameras = cams;
 
 		$scope.$on("LastRepeaterElement", function () {
-			$("img").error(function () {
-				$(this).parent().parent().parent().remove();
-			});
 			$(".preloader-wrapper").remove();
 			$('.materialboxed').materialbox();
 			$interval(reloadWebcam, 1000);
 			reloadWebcam();
+		});
+
+		$("#next").click(function () {
+			$scope.nextPage();
+		});
+
+		$("#prev").click(function () {
+			$scope.prevPage();
 		});
 	});
 
