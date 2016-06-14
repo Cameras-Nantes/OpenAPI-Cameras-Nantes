@@ -62,8 +62,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
 	$scope.page = $stateParams.p;
 
-
-
 	$scope.nextPage = function() {
 		var page = parseInt(window.location.href.slice(-1));
 		(page > 0 && page <= 9) && $state.go("home", {p : page +1});
