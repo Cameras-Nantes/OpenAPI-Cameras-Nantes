@@ -7,7 +7,7 @@ un site permettant de les consulter, de les visualiser simplement, et de pouvoir
 et par lieu.
 
 ## Technologies utilisées
-- Site et données accessibles sur [Firebase] (https://openapi-cameras-nantes.firebaseapp.com/) et sur [OpenAPI-Cameras-Nantes.github.io
+- Site et données accessibles sur [Firebase] (https://openapi-cameras-nantes.firebaseapp.com/) [(https://openapi-cameras-nantes.firebaseapp.com/)] (https://openapi-cameras-nantes.firebaseapp.com/) 
 ](OpenAPI-Cameras-Nantes.github.io)
 - HTML5
 - [Materialize CSS] (http://materializecss.com/)
@@ -29,7 +29,7 @@ Nantes, France, which are accessible online. I created ALL the data joined with 
 where you are able to browse through cameras, and find them thanks to my extra data.
 
 ##Used thechnologies
-- Website and database available at [Firebase] (https://openapi-cameras-nantes.firebaseapp.com/) and [OpenAPI-Cameras-Nantes.github.io
+- Website and database available at [Firebase] (https://openapi-cameras-nantes.firebaseapp.com/) [(https://openapi-cameras-nantes.firebaseapp.com/)] (https://openapi-cameras-nantes.firebaseapp.com/) 
 ](OpenAPI-Cameras-Nantes.github.io)
 - HTML5
 - [Materialize CSS] (http://materializecss.com/)
