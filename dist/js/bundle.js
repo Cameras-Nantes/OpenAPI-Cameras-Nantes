@@ -64532,13 +64532,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 			$('.materialboxed').materialbox();
 			$interval(reloadWebcam, 1000);
 			reloadWebcam();
+			$("#secondPagination").show();
 		});
 
-		$("#next").click(function () {
+		$(".next").click(function () {
 			$scope.nextPage();
 		});
 
-		$("#prev").click(function () {
+		$(".prev").click(function () {
 			$scope.prevPage();
 		});
 	});

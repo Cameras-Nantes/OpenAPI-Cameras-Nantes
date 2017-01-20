@@ -5,3 +5,6 @@ img {
 .preloader-wrapper{
 	left: 50%
 }
+#secondPagination{
+	display:none;
+}
