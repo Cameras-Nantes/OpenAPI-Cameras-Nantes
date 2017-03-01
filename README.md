@@ -22,6 +22,8 @@ et par lieu.
     - [Browserify] (http://browserify.org/)
     - [Babelify] (https://github.com/babel/babelify)
   
+ # A new version using [Angular 2](https://angular.io/) is coming !
+  
 ###English version
 > Explore cameras around Nantes, France !
 > This is my personnal project to bring some data (location, number and zip code, and GPS cordinates of the cameras) for the cameras of 
