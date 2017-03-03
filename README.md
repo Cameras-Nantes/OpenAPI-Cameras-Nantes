@@ -1,47 +1,31 @@
-# OpenAPI-Cameras-Nantes
+# CameraNantes
 
-> Explorez les caméras autour de Nantes !
-> Ceci est un projet personnel. Certaines caméras de la ville de Nantes, France, sont librement accessibles sur internet. 
-Mon projet est d'ajouter des données supplémentaires pour les caméras (liueu, code postal, coordonnées GPS) à ces caméras, et de proposer 
-un site permettant de les consulter, de les visualiser simplement, et de pouvoir les rechercher par code postal, par numéro de caméra,
-et par lieu.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
-## Technologies utilisées
-- Site et données accessibles sur [Firebase] (https://openapi-cameras-nantes.firebaseapp.com/) [(https://openapi-cameras-nantes.firebaseapp.com/)] (https://openapi-cameras-nantes.firebaseapp.com/) 
-](OpenAPI-Cameras-Nantes.github.io)
-- HTML5
-- [Materialize CSS] (http://materializecss.com/)
-- Javascript
-  - [JQuery] (https://jquery.com/)
-  - [EcmaScript 2015] (https://babeljs.io/docs/learn-es2015/)
-  - [Firebase Javascript API] (https://www.firebase.com/docs/web/api/)
-  - [ANgular.js] (https://angularjs.org/) 1.5
-    - [AngularFire] (https://www.firebase.com/docs/web/libraries/angular/)
-    - [Angular UI-ROuter] (https://github.com/angular-ui/ui-router)
-  - [Node.js] (https://nodejs.org/en/)
-    - [Browserify] (http://browserify.org/)
-    - [Babelify] (https://github.com/babel/babelify)
-  
- # A new version using [Angular 2](https://angular.io/) is coming !
-  
-###English version
-> Explore cameras around Nantes, France !
-> This is my personnal project to bring some data (location, number and zip code, and GPS cordinates of the cameras) for the cameras of 
-Nantes, France, which are accessible online. I created ALL the data joined with the cameras and my wish is to develop a website
-where you are able to browse through cameras, and find them thanks to my extra data.
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-##Used thechnologies
-- Website and database available at [Firebase] (https://openapi-cameras-nantes.firebaseapp.com/) [(https://openapi-cameras-nantes.firebaseapp.com/)] (https://openapi-cameras-nantes.firebaseapp.com/) 
-](OpenAPI-Cameras-Nantes.github.io)
-- HTML5
-- [Materialize CSS] (http://materializecss.com/)
-- Javascript
-  - [JQuery] (https://jquery.com/)
-  - [EcmaScript 2015] (https://babeljs.io/docs/learn-es2015/)
-  - [Firebase Javascript API] (https://www.firebase.com/docs/web/api/)
-  - [ANgular.js] (https://angularjs.org/) 1.5
-    - [AngularFire] (https://www.firebase.com/docs/web/libraries/angular/)
-    - [Angular UI-ROuter] (https://github.com/angular-ui/ui-router)
-  - [Node.js] (https://nodejs.org/en/)
-    - [Browserify] (http://browserify.org/)
-    - [Babelify] (https://github.com/babel/babelify)
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Deploying to GitHub Pages
+
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
+
+## Further help
+
+To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

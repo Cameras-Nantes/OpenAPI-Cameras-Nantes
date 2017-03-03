@@ -1,0 +1,25 @@
+<router-outlet></router-outlet>
+<div class="row">
+    <ng-container *ngFor="let cam of cameras; let last = last">
+        <div ngClass="col col l4 m6 s12" *ngIf="cam !== undefined">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{cam?.url}}" alt="?" class="materialboxed" data-caption="cam?.location - cam?.zip &nbsp; cam?.city - cam?.dd_lat, cam?.dd_long"
+                    />
+                    <span class="card-title">{{cam?.$id}}</span>
+                </div>
+                <div class="card-content">
+                    <p>
+                        {{cam?.zip}}&nbsp;{{cam?.city}}
+
+                        <br/> Coordonnées GPS: {{cam?.dd_lat}}, {{cam?.dd_long}}
+                    </p>
+                    {{last === true ? reloadCameras() : null}}
+                </div>
+                <div class="card-action">
+                    <a href="{{cam?.url}}" class="truncate" title="Accéder directement à l'URL de la cam?éra" target="_blank">{{cam?.location}}</a>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

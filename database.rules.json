@@ -1,9 +1,0 @@
-{
-  ".read": true,
-  ".write": "auth != null",
-  "rules" : {
-  	"cameras": {
-  		".indexOn" : "id"
-  	}
-  }
-}
