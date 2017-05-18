@@ -1,0 +1,11 @@
+<div class="row">
+  <app-card *ngFor="let camera of cameras" class="col col l4 m6 s12"
+  [_city]="camera?.city"
+  [_zip]="camera?.zip"
+  [_location]="camera?.location"
+  [_url]="camera?.url"
+  [_lattitude]="camera?.dd_lat"
+  [_longitude]="camera?.dd_long"
+  >
+  </app-card>
+</div>

@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-image">
+    <img src="{{url}}" alt="?" width="650" materialize class="materialboxed" [materializeParams]="[{caption: location + ' - ' + zip + ' ' + city}]"
+    />
+    <!-- <span class="card-title">{{id}}</span>-->
+  </div>
+  <div class="card-content">
+    <p>
+      {{zip}}&nbsp;{{city}}
+
+      <br/> Coordonnées GPS: {{lattitude}}, {{longitude}}
+    </p>
+  </div>
+  <div class="card-action">
+    <a href="{{url}}" class="truncate" title="Accéder directement à l'URL de la caméra" target="_blank">{{location}}</a>
+  </div>
+</div>

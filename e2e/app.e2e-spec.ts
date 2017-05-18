@@ -1,6 +1,6 @@
 import { CameraNantesPage } from './app.po';
 
-describe('camera-nantes App', function() {
+describe('camera-nantes App', () => {
   let page: CameraNantesPage;
 
   beforeEach(() => {

@@ -1,0 +1,39 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper grey darken-3">
+      <a href="#" class="brand-logo">{{mainTitle}}</a>
+      <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="https://github.com/OpenData-Camera-Nantes/OpenAPI-Cameras-Nantes" materialize="tooltip" class="tooltipped waves-effect waves-red" [materializeParams]="[{tooltip: sourceCode, delay:'50', position:'bottom'}]">
+					  <span class="octicon octicon-mark-github"></span>
+          </a>
+        </li>
+				<li>
+				  <a href="https://github.com/ThibaultOsmont" materialize="tooltip" class="tooltipped waves-effect waves-red" [materializeParams]="[{tooltip: meOnGitHub, delay:'50', position:'bottom'}]">
+					  <span class="octicon octicon-eye"></span>
+          </a>	
+				</li>
+				<li>
+          <a class="waves-effect waves-red modal-trigger" (click)="openModal()">
+            <i class="material-icons">search</i>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-menu">
+        <li>
+				  <a href="#mSearch" class="waves-effect waves-teal modal-trigger" (click)="openModal()">Rechercher des caméras</a>
+				</li>
+				<li>
+				  <a href="https://github.com/OpenData-Camera-Nantes/OpenAPI-Cameras-Nantes" class="waves-effect waves-teal">Code source</a>
+				</li>
+				<li>
+					<a href="https://github.com/ThibaultOsmont" class="waves-effect waves-teal">Mon GitHub</a>
+				</li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<app-modal></app-modal>
+<!-- materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions" -->
